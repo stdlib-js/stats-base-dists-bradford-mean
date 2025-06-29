@@ -23,6 +23,7 @@
 
 <details>
 
+-   [`c562195`](https://github.com/stdlib-js/stdlib/commit/c562195df34a35546bcbd17e199802a9dd5e75aa) - **bench:** use correct Makefile for remaining Bradford distribution functions _(by Philipp Burckhardt)_
 -   [`0ec467e`](https://github.com/stdlib-js/stdlib/commit/0ec467e681c02b54383c7f50b5fbb07a938e16cb) - **chore:** remove excess trailing newlines [(#7512)](https://github.com/stdlib-js/stdlib/pull/7512) _(by stdlib-bot)_
 -   [`bd51ebe`](https://github.com/stdlib-js/stdlib/commit/bd51ebe5f252f95c9c8961ce5b7dbd6d1a4e35da) - **feat:** add C implementation for `stats/base/dists/bradford/mean` _(by Philipp Burckhardt)_
 -   [`fe60f20`](https://github.com/stdlib-js/stdlib/commit/fe60f203dd58e075e075d8cc8751216b66314fc9) - **chore:** adds `opts` [(#6908)](https://github.com/stdlib-js/stdlib/pull/6908) _(by Harsh)_
