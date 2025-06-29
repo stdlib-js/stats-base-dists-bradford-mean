@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-25)
+## Unreleased (2025-06-29)
 
 <section class="features">
 
@@ -23,6 +23,7 @@
 
 <details>
 
+-   [`0ec467e`](https://github.com/stdlib-js/stdlib/commit/0ec467e681c02b54383c7f50b5fbb07a938e16cb) - **chore:** remove excess trailing newlines [(#7512)](https://github.com/stdlib-js/stdlib/pull/7512) _(by stdlib-bot)_
 -   [`bd51ebe`](https://github.com/stdlib-js/stdlib/commit/bd51ebe5f252f95c9c8961ce5b7dbd6d1a4e35da) - **feat:** add C implementation for `stats/base/dists/bradford/mean` _(by Philipp Burckhardt)_
 -   [`fe60f20`](https://github.com/stdlib-js/stdlib/commit/fe60f203dd58e075e075d8cc8751216b66314fc9) - **chore:** adds `opts` [(#6908)](https://github.com/stdlib-js/stdlib/pull/6908) _(by Harsh)_
 -   [`e991da9`](https://github.com/stdlib-js/stdlib/commit/e991da93b36805cf0705e9a9625f06b9c2e44173) - **docs:** replace manual `for` loop in examples [(#6906)](https://github.com/stdlib-js/stdlib/pull/6906) _(by Harsh)_
