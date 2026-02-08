@@ -69,7 +69,7 @@ where `c` is the shape parameter.
 ## Usage
 
 ```javascript
-import mean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bradford-mean@esm/index.mjs';
+import mean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bradford-mean@v0.1.1-esm/index.mjs';
 ```
 
 #### mean( c )
@@ -122,7 +122,7 @@ v = mean( -1.5 );
 
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import mean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bradford-mean@esm/index.mjs';
+import mean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bradford-mean@v0.1.1-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
