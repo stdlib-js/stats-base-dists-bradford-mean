@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-25)
+## Unreleased (2026-09-26)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`ea33a97`](https://github.com/stdlib-js/stdlib/commit/ea33a97f17b445e4671c3e30c3680e81e411dc8f) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`27b070d`](https://github.com/stdlib-js/stdlib/commit/27b070dd566f397ad5e5da2103e55906863e5b57) - **chore:** clean-up [(#15517)](https://github.com/stdlib-js/stdlib/pull/15517) _(by Philipp Burckhardt, Athan Reines)_
 -   [`5fd9c03`](https://github.com/stdlib-js/stdlib/commit/5fd9c03cdc49a648b8cd9d8463988969d9307f8b) - **test:** migrate `stats/base/dists/bradford/mean` to ULP-based assertions [(#15248)](https://github.com/stdlib-js/stdlib/pull/15248) _(by Athan Reines)_
 -   [`ca49ceb`](https://github.com/stdlib-js/stdlib/commit/ca49ceb1e17979e0ecb77bc50dedd14b7515b46f) - **refactor:** rename internal variable [(#13167)](https://github.com/stdlib-js/stdlib/pull/13167) _(by Philipp Burckhardt)_
