@@ -48,7 +48,7 @@ The [expected value][expected-value] for a [Bradford][bradford-distribution] ran
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="\mathbb{E}\left[ X \right] = \frac{c - \ln(1 + c)}{c \ln(1 + c)}" data-equation="eq:bradford_expectation">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@591cf9d5c3a0cd3c1ceec961e5c49d73a68374cb/lib/node_modules/@stdlib/stats/base/dists/bradford/mean/docs/img/equation_bradford_expectation.svg" alt="Expected value for a Bradford distribution.">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@5d1c0d2de65d52489e7e684152670f32c9e64ceb/lib/node_modules/@stdlib/stats/base/dists/bradford/mean/docs/img/equation_bradford_expectation.svg" alt="Expected value for a Bradford distribution.">
     <br>
 </div> -->
 
@@ -62,38 +62,32 @@ where `c` is the shape parameter.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-bradford-mean
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-mean = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bradford-mean@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var mean = require( 'path/to/vendor/umd/stats-base-dists-bradford-mean/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bradford-mean@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.mean;
-})();
-</script>
+var mean = require( '@stdlib/stats-base-dists-bradford-mean' );
 ```
 
 #### mean( c )
@@ -138,15 +132,10 @@ v = mean( -1.5 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-bradford-mean@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var mean = require( '@stdlib/stats-base-dists-bradford-mean' );
 
 var opts = {
     'dtype': 'float64'
@@ -154,11 +143,6 @@ var opts = {
 var c = uniform( 10, 0.1, 10.0, opts );
 
 logEachMap( 'c: %0.4f, E(X;c): %0.4f', c, mean );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -167,7 +151,95 @@ logEachMap( 'c: %0.4f, E(X;c): %0.4f', c, mean );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/bradford/mean.h"
+```
+
+#### stdlib_base_dists_bradford_mean( c )
+
+Returns the expected value of a Bradford distribution with shape parameter `c`.
+
+```c
+double y = stdlib_base_dists_bradford_mean( 0.1 );
+// returns ~0.492
+```
+
+The function accepts the following arguments:
+
+-   **c**: `[in] double` shape parameter.
+
+```c
+double stdlib_base_dists_bradford_mean( const double c );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/bradford/mean.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+int main( void ) {
+    double c;
+    double y;
+    int i;
+
+    for ( i = 0; i < 10; i++ ) {
+        c = random_uniform( 0.01, 10.0 );
+        y = stdlib_base_dists_bradford_mean( c );
+        printf( "c: %lf, E(X;c): %lf\n", c, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
